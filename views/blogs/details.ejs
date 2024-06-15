@@ -2,8 +2,10 @@
 <body>
   <div class="single-blog">
     <h3><%= blog.title %></h3>
-    <p><%= blog.body %></p>
-    <a class="delete" data-id="<%= blog._id %>">Delete</a>
+    <div class="blog-body">
+      <p><%= blog.body %></p>
+      <a class="delete" data-id="<%= blog._id %>">Delete</a>
+    </div>
   </div>
 </body>
 <script>

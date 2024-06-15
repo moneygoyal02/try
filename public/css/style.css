@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 
-nav{
-    background-color: antiquewhite;
+body{
+    background-image: url("/img/cool-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
 
 .navbar .container-fluid .navbar-brand{
     color: red;
@@ -18,13 +22,20 @@ nav{
     font-size: x-large;
 }
 
+.custom-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
 .container {
     margin: 20px auto;
 }
 
 /* Container for each blog post */
 .blog-post {
-    border: 1px solid #ddd;
+    
     padding: 16px;
     margin-bottom: 16px;
     overflow: hidden; /* Ensure content doesn't overflow */
@@ -49,23 +60,43 @@ nav{
     height: 72px; /* Height corresponding to the number of lines */
 }
 
-/* Read more link */
-.read-more {
-    display: block;
-    margin-top: 8px;
-    font-size: 14px;
-    color: #007BFF;
+
+.blog-post-title{
     text-decoration: none;
+    color: black;
 }
 
-.read-more:hover {
+.blog-post-title:hover {
     text-decoration: underline;
 }
 
-.single-blog a {
-    cursor: pointer;
-}
+
 
 footer {
     margin-bottom: 20px;
 }
+
+.single-blog {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .blog-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .delete {
+    margin-left: auto;
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .delete:hover {
+    text-decoration: underline;
+  }
+  

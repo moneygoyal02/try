@@ -3,11 +3,12 @@
     <% if(blogs.length > 0) { %>
     <% for(blog of blogs) { %>
         <div class="blog-post">
-            <h2 class="blog-post-title"><%= blog.title %></h2>
+            <a href="/blogs/<%= blog._id %>" class="blog-post-title"><%= blog.title %></a>
+            
             <div class="blog-post-snippet">
                 <%= blog.body %>
             </div>
-            <a href="/blogs/<%= blog._id %>" class="read-more">See full blog</a>
+            
         </div>
         <% } %>
     <% } %>
