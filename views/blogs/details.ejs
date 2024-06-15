@@ -1,0 +1,21 @@
+<%- layout('/layouts/boilerplate') -%>
+<body>
+  <div class="single-blog">
+    <h3><%= blog.title %></h3>
+    <p><%= blog.body %></p>
+    <a class="delete" data-id="<%= blog._id %>">Delete</a>
+  </div>
+</body>
+<script>
+  let btn = document.querySelector("a.delete");
+
+  btn.addEventListener("click", (e) => {
+    const endpoint = `/blogs/${btn.dataset.id}`;
+    fetch(endpoint, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((data) => (window.location.pathname = data.redirect))
+      .catch((err) => console.log(err));
+  });
+</script>

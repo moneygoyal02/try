@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: antiquewhite;
+}
+
+.navbar .container-fluid .navbar-brand{
+    color: red;
+    font-size: xx-large;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-size: x-large;
+}
+
+.container {
+    margin: 20px auto;
+}
+
+/* Container for each blog post */
+.blog-post {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 16px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Title of the blog post */
+.blog-post-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Blog post snippet */
+.blog-post-snippet {
+    font-size: 16px;
+    color: #555;
+    display: -webkit-box; /* Support for WebKit browsers */
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical; /* Vertical box orientation */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis at the end of overflow text */
+    height: 72px; /* Height corresponding to the number of lines */
+}
+
+/* Read more link */
+.read-more {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.single-blog a {
+    cursor: pointer;
+}
+
+footer {
+    margin-bottom: 20px;
+}

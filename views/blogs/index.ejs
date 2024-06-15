@@ -1,0 +1,14 @@
+<%- layout('/layouts/boilerplate') -%>
+<body>
+    <% if(blogs.length > 0) { %>
+    <% for(blog of blogs) { %>
+        <div class="blog-post">
+            <h2 class="blog-post-title"><%= blog.title %></h2>
+            <div class="blog-post-snippet">
+                <%= blog.body %>
+            </div>
+            <a href="/blogs/<%= blog._id %>" class="read-more">See full blog</a>
+        </div>
+        <% } %>
+    <% } %>
+</body>
