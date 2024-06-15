@@ -3,7 +3,7 @@ const Blog = require("../models/blog.js");
 // getting all the blogs
 const blog_index = async (req, res) => {
     let blogs = (await Blog.find()).reverse();
-    res.render("blogs/index", { blogs, title: "See all blogs" });
+    res.render("blogs/index", { blogs, title: "Blogs" });
 }
 
 // render create blog page
